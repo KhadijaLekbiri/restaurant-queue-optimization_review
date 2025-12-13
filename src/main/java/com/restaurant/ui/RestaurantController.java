@@ -273,7 +273,8 @@ public class RestaurantController implements Initializable {
             // Update statistics
             updateStatistics(originalOrders, scheduledOrders);
             
-            statusLabel.setText("Applied " + algorithm.getAlgorithmName() + " algorithm successfully.");
+            statusLabel.setText("Applied " + algorithm.getAlgorithmName() + " algorithm successfully. " +
+                              "Note: Status remains PENDING - algorithms only optimize display order.");
             
         } catch (Exception e) {
             showAlert("Error", "Failed to apply algorithm: " + e.getMessage(), Alert.AlertType.ERROR);
