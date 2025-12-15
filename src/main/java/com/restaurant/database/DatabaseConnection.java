@@ -12,9 +12,9 @@ import java.sql.SQLException;
  */
 public class DatabaseConnection {
     // Database configuration - Update these values according to your MySQL setup
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/restaurant_db";
-    private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "root";  // Change this to your MySQL password
+    private static final String DB_URL = System.getenv("DB_URL");
+    private static final String DB_USER = System.getenv("DB_USER");
+    private static final String DB_PASSWORD = System.getenv("DB_PASSWORD");
     
     private static DatabaseConnection instance;
     private Connection connection;
